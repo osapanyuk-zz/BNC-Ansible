@@ -1,0 +1,69 @@
+<div ng-controller="portAutomate" ng-cloak="" style="height: 100%; overflow: hidden;">
+
+  <md-content class="Header-Ansible">
+
+    <md-toolbar style="min-height: 45px;">
+      <div class="md-toolbar-tools" style="height: 45px;">
+
+
+        <md-truncate style="font-family:'BELL'; position: absolute; left: 90px; right: 170px; font-size: 30px;"></md-truncate>
+
+        <span flex=""></span>
+
+        <md-button class="md-fab md-mini ansible-icon" aria-label="Automate">
+          <md-icon md-svg-src="static/img/icons/ansible_24px.svg" class="ansible-icon"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </md-content>
+
+
+<section layout="row" flex="" style="height: 100%; position: relative;">
+  <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="true" style="background-color: #00549a;">
+    <div id="status-buttons" class="text-center">
+      
+      <ul class="form-nav-icon-container">
+        <a ui-sref-active="active" ui-sref=".selection">
+          <md-button class="md-icon-button md-icon-button-xxl" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+          </md-button>
+        </a>
+      </ul>
+
+      <ul class="form-nav-vertical-line-container">
+        <div></div>
+      </ul>
+
+      <ul class="form-nav-icon-container">
+        <a ui-sref-active="active" ui-sref=".configuration">
+          <md-button class="md-icon-button md-icon-button-xxl" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+          </md-button>
+        </a>
+      </ul>
+
+      <ul class="form-nav-vertical-line-container">
+        <div></div>
+      </ul>
+
+      <ul class="form-nav-icon-container">
+        <a ui-sref-active="active" ui-sref=".review">
+          <md-button class="md-icon-button md-icon-button-xxl" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+          </md-button>
+        </a>
+      </ul>
+
+    </div>
+  </md-sidenav>
+
+    <md-card style="height: calc(100% - 60px); position: relative; width: 100%;">
+      <form name="projectForm" novalidate style="height: 100%; width: 100%; overflow-y: auto;">
+
+       <div id="form-views" class="form-content" ui-view></div>
+
+      </form>
+    </md-card>
+</section>
+
+</div>

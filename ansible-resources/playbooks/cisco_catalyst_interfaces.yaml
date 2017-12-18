@@ -1,0 +1,22 @@
+---
+- hosts: LTEC-Catalysts
+  connection: local
+
+  tasks:
+
+    - name: show interfaces
+      ios_command:
+        commands:
+          - show interfaces description
+        host: "{{ inventory_hostname }}"
+        username: cisco
+        password: cisco
+      register: interfaces
+
+    - name: print results                    #Task Name
+      debug: msg="{{ interfaces }}"
+
+#    - name: save output to file
+#      copy:
+#        content: "{{ interfaces.stdout[0] }}"
+#        dest: "/etc/ansible/interfaces/show_run_{{ inventory_hostname }}.txt"

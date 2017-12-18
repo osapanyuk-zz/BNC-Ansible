@@ -1,0 +1,21 @@
+{
+  "name": "BNC-Ansible",
+  "version": "1.0.0",
+  "description": "Project aimed at bringing automation services for the BNC using Ansible.",
+  "main": "index.js",
+  "repository": "TODO UPDATE PATH",
+  "author": "Oleg Sapanyuk",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-aria": "^1.6.7",
+    "angular-material": "^1.1.5",
+    "angular-material-time-picker": "^1.0.7",
+    "angular-messages": "^1.6.7",
+    "angular-ui-router": "^0.4.3",
+    "jquery": "^3.2.1",
+    "svg-assets-cache": "^1.1.3"
+  }
+}

@@ -1,0 +1,8 @@
+[cisco:children]
+cisco_nxos
+cisco_ios
+
+[cisco_nxos]
+
+[cisco_ios]
+172.16.227.66 ansible_host=172.16.227.66

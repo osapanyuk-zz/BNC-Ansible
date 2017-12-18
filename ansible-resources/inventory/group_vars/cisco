@@ -1,0 +1,7 @@
+---
+# Variables for the group cisco
+
+# List of general cli commands
+
+show_interface: show interface brief
+show_vlan: show vlan

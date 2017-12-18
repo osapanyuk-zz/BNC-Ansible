@@ -1,0 +1,25 @@
+---
+- hosts: LTEC-Catalysts
+  connection: local
+
+  tasks:
+
+    - name: get interface info
+      ios_command:
+        commands:
+          - show interface {{ interface }}
+          - show interface {{ interface }} switchport
+        host: "{{ inventory_hostname }}"
+        username: cisco
+        password: cisco
+      register: interface_info
+
+    - name: save output to file
+      copy:
+        content: "{{ interface_info.stdout[0] }}"
+        dest: "/etc/ansible/interface_info/{{ inventory_hostname }}.txt"
+
+    - name: save output to file 2
+      copy:
+        content: "{{ interface_info.stdout[1] }}"
+        dest: "/etc/ansible/interface_info/{{ inventory_hostname }}_switchport.txt"

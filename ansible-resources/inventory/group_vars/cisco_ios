@@ -1,0 +1,8 @@
+---
+# Variables for the group cisco_ios
+
+platform: cisco_ios
+credentials:
+    username: cisco
+    password: cisco
+    secret: cisco

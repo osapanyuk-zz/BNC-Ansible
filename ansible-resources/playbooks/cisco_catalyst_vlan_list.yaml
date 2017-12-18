@@ -1,0 +1,19 @@
+---
+- hosts: LTEC-Catalysts
+  connection: local
+
+  tasks:
+
+    - name: get vlan list
+      ios_command:
+        commands:
+          - show vlan brief
+        host: "{{ inventory_hostname }}"
+        username: cisco
+        password: cisco
+      register: interface_info
+
+    - name: save output to file
+      copy:
+        content: "{{ interface_info.stdout[0] }}"
+        dest: "/etc/ansible/vlan_list/{{ inventory_hostname }}.txt"

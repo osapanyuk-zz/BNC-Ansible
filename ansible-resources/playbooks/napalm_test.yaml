@@ -1,0 +1,19 @@
+- name: Test Inventory #The Task Name
+  hosts: LTEC-Catalysts         #This will be in your ansible inventory file
+  connection: local    #Required
+  gather_facts: no     #Do not gather facts
+
+  tasks:
+
+    - name: get facts from device
+      napalm_get_facts:
+        optional_args: {'secret': cisco}
+        hostname: "{{ inventory_hostname }}"
+        username: 'cisco'
+        dev_os: 'ios'
+        password: 'cisco'
+        filter: 'interfaces'
+      register: result
+
+    - name: print results                    #Task Name
+      debug: msg="{{ result.ansible_facts.napalm_interfaces }}"

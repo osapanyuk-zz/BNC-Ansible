@@ -1,0 +1,244 @@
+.fillHeight {
+  height: 100%; }
+
+.navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px; }
+
+md-input-container:not(.md-input-has-value) input:not(:focus) {
+  color: black; }
+
+md-input-container.md-input-invalid md-select .md-select-value {
+  padding-bottom: 0px;
+}
+
+/*md-toolbar {
+  height: 45px !important;
+  min-height: 45px !important; }
+*/
+.Header-Ansible {
+  height: 45px; }
+
+.md-toolbar-tools {
+  background-color: #00549a;
+  height: 45px; }
+
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+  color: white; }
+
+.md-button.md-fab.ansible-icon {
+  background-color: black; }
+
+.md-button.md-fab.ansible-icon:not([disabled]):hover {
+  background-color: rgb(66, 66, 66); }
+
+@font-face {
+  font-family: 'BELL';
+  src: url('../fonts/bell-icon.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/bell-icon.ttf')  format('truetype'); /* Safari, Android, iOS */}
+
+/*************************************************/
+
+/* BASIC STYLINGS
+============================================================================= */
+
+/* form styling */
+#form-container                { background:#2f2f2f; margin-bottom:20px;
+    border-radius:5px; }
+#form-container .page-header   { background:#151515; margin:0; padding:30px;
+    border-top-left-radius:5px; border-top-right-radius:5px; }
+
+/* numbered buttons */
+#status-buttons                 {  }
+#status-buttons a               { color:#FFF; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#status-buttons a:hover         { text-decoration:none; }
+#status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px;
+    border-radius:50%; }
+
+/* active buttons */
+#status-buttons a.active span   { background:#00BC8C; }
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+
+
+#form-views.ng-enter,
+#form-views.ng-leave      { 
+  position: absolute;
+  overflow: hidden;
+  width: inherit;
+  min-width:calc(100% - 415px);
+  transition:0.5s all ease;
+  -moz-transition:0.5s all ease;
+  -webkit-transition:0.5s all ease;
+}
+
+/* enter animation */
+#form-views.ng-enter            {
+  position:absolute;
+  overflow: hidden;
+  width: inherit;
+  min-width:calc(100% - 415px);
+    -webkit-animation:slideInRight 0.5s both ease;
+        -moz-animation:slideInRight 0.5s both ease;
+        animation:slideInRight 0.5s both ease;
+}
+
+/* leave animation */
+#form-views.ng-leave            {
+  position: absolute;
+  overflow: hidden;
+  width: inherit;
+  min-width:calc(100% - 415px);
+  -webkit-animation:slideOutLeft 0.5s both ease;
+  -moz-animation:slideOutLeft 0.5s both ease;
+  animation:slideOutLeft 0.5s both ease;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+
+/* Multi step form nav bar */
+
+.form-nav-vertical-line-container {
+  display: block;
+  height: 70px;
+}
+
+.form-nav-vertical-line-container > div {
+  width: 2px;
+  background-color: black;
+  height: 100px;
+  margin-left: 80px;
+  position: relative;
+  top: -10px;
+}
+
+.md-button.md-icon-button-xxl {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  background-color: inherit !important;
+}
+
+.form-nav-icon-container {
+  background-color: inherit;
+}
+
+.form-nav-icon-container > a {
+  background-color: inherit;
+}
+
+#status-buttons {
+  background-color: inherit;
+  margin: 60px auto;
+}
+    
+/**************************/
+
+/* form content */
+
+.form-content {
+  margin: 5px 10px 10px 10px;
+}
+
+/****************/
+
+/* Needed for time icon - tho should not be hard coded in my css */
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*****************************************************************/

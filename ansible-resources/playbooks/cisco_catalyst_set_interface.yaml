@@ -1,0 +1,17 @@
+---
+- hosts: LTEC-Catalysts
+  connection: local
+
+  tasks:
+
+    - name: configure interface settings
+      ios_config:
+        lines:
+          - description test
+        parents: interface {{ interface }}
+        host: "{{ inventory_hostname }}"
+        username: cisco
+        password: cisco
+        auth_pass: cisco
+        authorize: yes
+        match: exact

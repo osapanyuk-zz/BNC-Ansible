@@ -1,0 +1,14 @@
+---
+- hosts: LTEC-Catalysts
+  connection: local
+
+  tasks:
+
+    - name: take backup
+      ios_config:
+        backup: yes
+        authorize: yes
+        host: "{{ inventory_hostname }}"
+        username: cisco
+        password: cisco
+        auth_pass: cisco
